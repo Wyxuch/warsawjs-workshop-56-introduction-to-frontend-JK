@@ -1,0 +1,133 @@
+@import "./src/scss/constants";
+
+#mainWrapper {
+  font-family: Lato, sans-serif;
+  font-size: $medium;
+  background-color: $light-gray;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+  .button {
+    background: transparent;
+    border: 0;
+
+    cursor: pointer;
+    color: $white;
+    font-size: $medium;
+    text-align: left;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+
+    &:hover {
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    &.primary {
+      &:hover {
+        background-color: lighten($primary, 5%);
+      }
+    }
+
+    &.primaryLight {
+      background-color: lighten($primary, 5%);
+      text-align: center;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+
+    &.secondary {
+      background-color: $secondary;
+      text-align: center;
+      &:hover {
+        background-color: darken($secondary, 5%);
+      }
+    }
+  }
+
+#nav {
+  background-color: $primary;
+  color: $white;
+  width: 300px;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .logoWrapper {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 16px;
+
+    .logoImage {
+      height: 100%;
+      width: auto;
+    }
+
+    .logoText {
+      padding-left: 8px;
+      font-size: $large;
+    }
+  }
+
+  .navMenuWrapper {
+
+    .navMenuTitle {
+      margin-bottom: 8px;
+      padding: 16px;
+    }
+  }
+
+}
+
+#mainView {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .itemCard {
+    margin: 8px;
+    width: 380px;
+    height: 400px;
+    background-color: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px 0 $dark-gray;
+
+    .itemImage {
+      width: 100%;
+      height: 50%;
+      background-color: #737373;
+    }
+
+    .itemDetails {
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .itemButtons {
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+
+      & > *:first-child {
+        margin-right: 8px;
+      }
+    }
+
+    & > p {
+      padding: 8px;
+      height: 20%;
+      color: $dark-gray;
+    }
+  }
+}
