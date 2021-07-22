@@ -20,25 +20,18 @@ Font sizes
 - large `1.5rem;`
 
 #Task 2 
-Create initial layout of the website. Using flexbox create navbar and main view and style them.
-(100vh or 100vw is very useful in this case)
-
-#Task 3 
 Add `Lato` font from [https://fonts.google.com](https://fonts.google.com/) 
 (only Regular and Bold) using import in `./main.scss`
 
-#Task 4 
-Create Wrapper for logo with the text. (you can find logo in `src/img`) and style it (remember - flexbox is your friend :) )
+#Task 3
+- Create initial layout of the website (navbar and wrapper for items)  
+- Create Wrapper for logo with the text. (you can find logo in `src/img`) and style it (use flexbox)
 
-#Task 5 
-- Create Wrapper with title `Filters`.
-- Add template button witch `class='button'` to wrapper.
-- Create hover effect on button (lighten by 5%) and add transition.
-
-#Task 6 
+#Task 4
 - Temporary make main view a flexbox that centers element
-- Create template item card, add variants to class `button` you made earlier so you can use it as for example `button primary`, `button secondary`
-#Task 7 
+- Create template item card, class for the button should be accessible for all components of the project
+#Task 5 
 Copy/paste few cards and adjust main view's flebox so cards align like in project (use flex wrap)
-#Task 8 
-#Task 9 
+#Task 6
+Create cards based on `data.json` and append them on your webite
+#Task 7 
