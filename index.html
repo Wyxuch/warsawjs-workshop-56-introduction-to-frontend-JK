@@ -9,7 +9,7 @@
     <meta name="description" content="Workshops 57">
     <meta name="author" content="You">
 
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="./dist/img/favicon.ico">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -18,9 +18,42 @@
 </head>
 
 <body>
-    <div id="main">
+<div id="mainWrapper">
+    <div id="nav">
+        <div class="logoWrapper">
+            <img class="logoImage" src="src/img/logo.png">
+            <span class="logoText">uStore</span>
+        </div>
+    </div>
+    <div id="mainView">
+<!--        here goes items-->
     </div>
 
+    <div id="shoppingCartWrapper">
+        <div id="shoppingCartBackground"></div>
+        <div id="shoppingCartCounter"></div>
+        <img id="shoppingCartImage" src="src/img/shopping-cart.png"/>
+    </div>
+
+<!--    DON"T DELETE THIS-->
+<!--    Modal-->
+    <div id="modalBg" class="hidden">
+        <div id="modal">
+            <div id="shoppingCartContent">
+                <div id="shoppingCartList">
+<!--                    items go here-->
+                </div>
+                <div id="checkout">
+                    <button id="checkoutButton">checkout</button>
+                    <p id="sumPrice">9990</p>
+                </div>
+            </div>
+            <div id="thanksMessage" class="hidden">
+                <p><span>Thank you for shopping, have a great day</span> &#128516;</p>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="./dist/js/bundle.min.js"></script>
 </body>
 </html>

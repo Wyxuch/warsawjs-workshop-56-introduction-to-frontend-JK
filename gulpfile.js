@@ -7,11 +7,15 @@ const {
 } = require('gulp');
 
 // Load plugins
-
+const json = require('@rollup/plugin-json');
 const uglify = require('gulp-uglify');
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass')(require('sass'));
+const rollup = require('gulp-better-rollup');
+const babel = require('rollup-plugin-babel');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
@@ -36,6 +40,7 @@ function js() {
 
     return gulp.src(source)
         .pipe(changed(source))
+        .pipe(rollup({ plugins: [babel(), resolve(), commonjs(), json()] }, 'umd'))
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(rename({

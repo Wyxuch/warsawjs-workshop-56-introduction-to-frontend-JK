@@ -9,14 +9,16 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp watch"
+    "start": "gulp watch --experimental-moudles"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.14.8",
     "browser-sync": "^2.27.4",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
     "gulp-changed": "^4.0.3",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -26,9 +28,16 @@
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
     "node": "^16.5.0",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.35.2"
   },
   "dependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "node-sass": "^6.0.1"
   }
 }
