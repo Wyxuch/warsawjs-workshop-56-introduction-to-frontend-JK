@@ -26,14 +26,31 @@
         </div>
     </div>
     <div id="mainView">
-        <div class="itemCard">
-            <div class="itemImage"></div>
-            <div class="itemDetails">
-                <p class="itemTitle">title</p>
-                <p class="itemPrice">222</p>
+<!--        here goes items-->
+    </div>
+
+    <div id="shoppingCartWrapper">
+        <div id="shoppingCartBackground"></div>
+        <div id="shoppingCartCounter"></div>
+        <img id="shoppingCartImage" src="src/img/shopping-cart.png"/>
+    </div>
+
+<!--    DON"T DELETE THIS-->
+<!--    Modal-->
+    <div id="modalBg" class="hidden">
+        <div id="modal">
+            <div id="shoppingCartContent">
+                <div id="shoppingCartList">
+<!--                    items go here-->
+                </div>
+                <div id="checkout">
+                    <button id="checkoutButton">checkout</button>
+                    <p id="sumPrice">9990</p>
+                </div>
             </div>
-            <p>Lorem ipsum</p>
-            <button class="button primary">Buy</button>
+            <div id="thanksMessage" class="hidden">
+                <p><span>Thank you for shopping, have a great day</span> &#128516;</p>
+            </div>
         </div>
     </div>
 </div>

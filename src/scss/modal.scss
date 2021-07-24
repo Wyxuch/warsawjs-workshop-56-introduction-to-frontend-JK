@@ -1,0 +1,104 @@
+@import "./constants";
+
+#modalBg {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0,0,0,0.65);
+  width: 100vw;
+  height: 100vh;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.visible {
+    display: block;
+  }
+
+  .hidden {
+    display: none!important;
+  }
+
+  .visible {
+    display: block;
+  }
+}
+
+#modal {
+  position: fixed;
+  top: 10vh;
+  left: 20vw;
+  width: 60vw;
+  height: 80vh;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 32px ;
+  border-radius: 8px;
+
+  #shoppingCartContent {
+    height: 100%;
+  }
+
+  #shoppingCartList {
+    height: 90%;
+    overflow: auto;
+  }
+
+  .shoppingCartListItem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    border-bottom: #737373 1px solid;
+    margin-bottom: 16px;
+  }
+
+  #checkout {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7rem;
+
+    button {
+      border: 0;
+
+      cursor: pointer;
+      color: $white;
+      font-size: $medium;
+      padding: 16px;
+      border-radius: 8px;
+      background-color: $secondary;
+      text-align: center;
+      text-transform: uppercase;
+
+      &:hover {
+        transition: background-color 0.1s ease-in-out;
+        background-color: darken($secondary, 5%);
+      }
+    }
+  }
+
+  #thanksMessage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+
+    & > p > span{
+      background-image:
+              linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: move 35s linear infinite;
+    }
+  }
+}
+
+@keyframes move {
+  to {
+    background-position: 800vh;
+  }
+}

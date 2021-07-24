@@ -1,4 +1,7 @@
 @import "./src/scss/constants";
+body {
+  overflow-x: hidden;
+}
 
 #mainWrapper {
   font-family: Lato, sans-serif;
@@ -10,13 +13,10 @@
 }
 
   .button {
-    background: transparent;
     border: 0;
-
     cursor: pointer;
     color: $white;
     font-size: $medium;
-    text-align: left;
     padding: 16px;
     width: 100%;
     border-radius: 8px;
@@ -24,7 +24,7 @@
     text-align: center;
 
     &:hover {
-      transition: background-color 0.1s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
       background-color: darken($secondary, 5%);
     }
   }
@@ -49,6 +49,7 @@
     .logoImage {
       height: 100%;
       width: auto;
+      animation: rotate 10s linear infinite;
     }
 
     .logoText {
@@ -98,5 +99,97 @@
       height: 20%;
       color: $dark-gray;
     }
+  }
+}
+
+#shoppingCartWrapper {
+  cursor: pointer;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: none;
+
+  #shoppingCartBackground {
+    background-color: $secondary;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 4px 4px 0 $dark-gray;
+    position: relative;
+  }
+
+  #shoppingCartCounter {
+    color: $white;
+    text-align: center;
+    background-color: $primary;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding-top: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #shoppingCartImage {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 8px;
+  }
+}
+
+#shoppingCartWrapper.visible {
+  display: block;
+
+  #shoppingCartBackground {
+      animation: drop linear 0.3s;
+  }
+
+  #shoppingCartCounter {
+    animation: drop linear 0.5s;
+  }
+
+  #shoppingCartImage {
+    animation: fromLeft linear 0.4s;
+  }
+}
+
+.wrapper > .hidden {
+  display: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -100vh;
+    transform: scaleY(2);
+  }
+  100% {
+    transform: scaleY(1);
+    top: 0;
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    left: -100vw;
+    transform: scaleX(2);
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    transform: scaleX(1);
+    left: 0;
   }
 }
