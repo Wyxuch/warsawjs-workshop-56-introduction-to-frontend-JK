@@ -1,0 +1,26 @@
+.parent {
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vh;
+}
+
+.child {
+    height: 40px;
+    width: 40px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}

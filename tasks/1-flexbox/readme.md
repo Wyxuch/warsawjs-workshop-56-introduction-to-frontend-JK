@@ -10,4 +10,8 @@ Use align items property to align childrens:
 - center
 - bottom
 
-### 3 remove width from children and see what happens
+### 3 wrap
+Make children bigger, change `wrap:` to `wrap` and resize the page.
+
+### 4 remove width from children and see what happens
+
