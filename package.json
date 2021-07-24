@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Project made for warsawJS workshops #57",
   "main": "index.js",
+  "author": "Jarosław Kowalczyk GH: Wyxuch",
   "repository": {
     "type": "git",
     "url": "https://github.com/Wyxuch/WarsawJS_WS57.git"
